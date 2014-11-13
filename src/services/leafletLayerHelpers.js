@@ -283,6 +283,9 @@ angular.module("leaflet-directive").factory('leafletLayerHelpers', function ($ro
     }
 
     return {
+        setLayerType: function(typeStr, typeDef){
+                layerTypes[typeStr] = typeDef;
+        },
         createLayer: function(layerDefinition) {
             if (!isValidLayerType(layerDefinition)) {
                 return;
